@@ -1,4 +1,4 @@
-package com.example.whatsappclone;
+package com.example.whatsappclone.Models;
 
 public class User {
 
@@ -14,6 +14,7 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.profileImage = profileImage;
     }
+
 
     public String getUid() {
         return uid;

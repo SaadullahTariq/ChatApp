@@ -12,4 +12,27 @@
     <string name="type_your_name">Type your name</string>
     <string name="please_set_your_name_and_an_optional_profile_image">Please set your name and an optional profile image.</string>
     <string name="profile_info">Profile Info</string>
+    <string name="sample_name">Sample Name</string>
+    <string name="tap_to_chat">Tap to chat</string>
+    <string name="saadullah_tariq">Saadullah tariq</string>
+    <string name="circlegreeen">CircleGreen</string>
+    <string name="camera_picture">Camera Picture</string>
+    <string name="attachment_picture">Attachment Picture</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="online">Online</string>
+    <string name="left_arrow">Left Arrow</string>
+    <string name="love_react">Love React</string>
+    <string name="text">Text</string>
+    <string name="avatar">Avatar</string>
+    <string name="feelings">feelings</string>
+    <string name="delete_for_everyone">Delete for Everyone</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_for_me">Delete for Me</string>
+    <string name="video_call">Video Call</string>
+    <string name="audio_call">Audio Call</string>
+    <string name="profile">Profile</string>
+    <string name="block">Block</string>
+    <string name="settings">Settings</string>
+    <string name="bottom_navigation_view">Bottom Navigation View</string>
+    <string name="send">Send</string>
 </resources>

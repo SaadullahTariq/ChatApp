@@ -1,4 +1,4 @@
-package com.example.whatsappclone;
+package com.example.whatsappclone.Activites;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,14 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
+import com.example.whatsappclone.R;
 import com.example.whatsappclone.databinding.ActivityOtpactivityBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
@@ -69,26 +66,20 @@ public class OTPActivity extends AppCompatActivity {
                 }).build();
         PhoneAuthProvider.verifyPhoneNumber(options);
 
-        binding.continueBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String otp = binding.otpView.getOTP();
-                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, otp);
+        binding.continueBtn.setOnClickListener(view -> {
+            String otp = binding.otpView.getOTP();
+            PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, otp);
 
-                auth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            Intent intent = new Intent(OTPActivity.this, SetupProfileActivity.class);
-                            startActivity(intent);
-                            finishAffinity();
-                        }
-                        else {
-                            Toast.makeText(OTPActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
+            auth.signInWithCredential(credential).addOnCompleteListener(task -> {
+                if (task.isSuccessful()){
+                    Intent intent = new Intent(OTPActivity.this, SetupProfileActivity.class);
+                    startActivity(intent);
+                    finishAffinity();
+                }
+                else {
+                    Toast.makeText(OTPActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
+            });
         });
 
     }

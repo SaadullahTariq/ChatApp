@@ -13,17 +13,18 @@
         android:theme="@style/Theme.WhatsappClone"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SetupProfileActivity"
+            android:name=".Activites.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.SetupProfileActivity"
             android:exported="false"
-            android:windowSoftInputMode="stateVisible"/>
+            android:windowSoftInputMode="stateVisible" />
         <activity
-            android:name=".OTPActivity"
+            android:name=".Activites.OTPActivity"
             android:exported="true"
-            android:windowSoftInputMode="stateVisible">
-
-        </activity>
+            android:windowSoftInputMode="stateVisible" />
         <activity
-            android:name=".PhoneNumberActivity"
+            android:name=".Activites.PhoneNumberActivity"
             android:exported="true"
             android:windowSoftInputMode="stateVisible">
             <intent-filter>
@@ -33,8 +34,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activites.MainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
